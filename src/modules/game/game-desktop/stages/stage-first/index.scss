@@ -1,0 +1,161 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+
+  &__header {
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+
+    .game__qr-img {
+      margin: 5px;
+      height: 240px;
+      width: 240px;
+    }
+  }
+
+  &__title {
+    span {
+      color: black;
+      -webkit-text-stroke: 3px white;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin: 15px;
+    margin-top: 50px;
+    font-size: 90px;
+  }
+
+  &__body-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: 50px;
+  }
+
+  &__activity {
+    position: fixed;
+    bottom: 10px;
+    left: 50px;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    font-size: 50px;
+    align-items: center;
+
+    .game__activity-icon {
+      color: white;
+      font-size: 80px;
+      padding: 10px;
+    }
+
+    .quantity {
+      color: white;
+      font-size: 80px;
+      padding: 10px;
+
+      margin-left: 20px;
+    }
+  }
+
+  .game__start-game {
+    width: 350px;
+    height: 100px;
+    margin-top: 15px;
+    font-size: 35px;
+    font-family: 'Dela Gothic One', cursive;
+    color: white;
+    border-color: white;
+    position: fixed;
+    right: 25px;
+    top: 30px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: black;
+      border-color: black;
+    }
+  }
+
+  &__players {
+    margin-top: 40px;
+    flex-grow: 1;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .game__player {
+    width: fit-content;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+
+
+    .game__player-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .game__info-wrapper {
+    width: 45%;
+    height: 150px;
+    min-width: 680px;
+    padding: 20px;
+    margin-top: 0;
+    color: black;
+    font-size: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 240px;
+  }
+
+  .game__url {
+    margin-top: 10px;
+    font-weight: 900;
+  }
+
+  .game__qr {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    flex: 1;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    margin-right: 120px;
+
+    .game__qr-action-button {
+      cursor: pointer;
+      font-size: 70px;
+      color: white;
+      transform: scale(1);
+      animation: pulse 2s infinite;
+    }
+  }
+}

@@ -1,0 +1,203 @@
+@import "src/styles/_variable.scss";
+
+.stage-fourth {
+  display: flex;
+  height: 100svh;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+
+  .stage-fourth__next-button {
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    font-family: 'Dela Gothic One', cursive;
+    color: black;
+    border-color: black;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.4);
+      border: 1px solid white;
+      color: white;
+    }
+  }
+
+  .stage-fourth__header {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+
+    text-align: center;
+
+    .stage-fourth__header-paper {
+      max-width: 95%;
+      min-width: 200px;
+      width: max-content;
+      padding: 10px 20px;
+      border-radius: 10px;
+
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .stage-fourth__body {
+    position: relative;
+    max-height: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 50px;
+
+    .stage-fourth__timer {
+      font-size: 80px;
+      width: 180px;
+      padding: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+
+      div {
+        font-size: 40px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    }
+
+
+    .stage-fourth__number-of-question {
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      background: white;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+
+      span {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .stage-fourth__footer {
+    height: 20%;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    font-size: 30px;
+
+
+    .first-button {
+      display: flex;
+      align-items: center;
+
+      background-color: $first-color;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px -6px 0px 0px inset;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      margin: 4px;
+      color: white;
+    }
+
+    .second-button {
+      display: flex;
+      align-items: center;
+
+      background-color: $second-color;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px -6px 0px 0px inset;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      margin: 4px;
+      color: white;
+    }
+
+    .third-button {
+      display: flex;
+      align-items: center;
+
+      background-color: $third-color;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px -6px 0px 0px inset;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      margin: 4px;
+      color: white;
+    }
+
+    .fourth-button {
+      display: flex;
+      align-items: center;
+
+      background-color: $fourth-color;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px -6px 0px 0px inset;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      margin: 4px;
+      color: white;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      flex: 1 0 45%; /* 50% width for each box */
+      box-sizing: border-box;
+
+      .icon {
+        font-size: 55px;
+        padding-right: 10px;
+        color: white;
+      }
+    }
+  }
+
+  .stage-fourth__number-of-question-count {
+    font-size: 80px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .stage-fourth__img {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10px;
+
+    img {
+      object-fit: contain;
+      width: 70%;
+    }
+  }
+
+  .fourth-stage__puzzle-icon {
+    font-size: 120px;
+  }
+}

@@ -1,0 +1,34 @@
+.stage-fourth__type-answer-view,
+.stage-fifth__puzzle-paper {
+  height: 50%;
+  display: flex;
+  align-content: flex-end;
+  margin-top: 5%;
+
+  .stage-fourth__type-answer-view__font {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    font-size: 2vw;
+    font-family: 'Dela Gothic One', cursive;
+    margin: 0;
+    text-align: center;
+
+    color: dimgray;
+  }
+}
+
+.stage-fourth__footer .fourth-stage__font {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  font-size: 2vw;
+  font-family: 'Dela Gothic One', cursive;
+  color: dimgray;
+
+  text-align: center;
+}

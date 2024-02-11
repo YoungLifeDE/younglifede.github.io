@@ -1,0 +1,60 @@
+.stage-sixth {
+  .stage-sixth__next-stage {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    font-size: 40px;
+    font-family: 'Dela Gothic One', cursive;
+    color: black;
+    border-color: black;
+
+    &:hover {
+      border: 1px solid white;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+  }
+
+  .stage-sixth__action-bitton {
+    height: 10vh;
+  }
+
+  .stage-sixth__score {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 79vh;
+  }
+
+  .stage-sixth__score-result {
+    display: flex;
+    margin: 10px;
+    padding: 12px;
+    padding-right: 30px;
+    width: 50%;
+    font-size: 35px;
+  }
+
+  .name {
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+
+    .divider {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+
+  .score {
+    max-width: 20%;
+  }
+}

@@ -1,0 +1,71 @@
+.home-host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .home-host__inputs-paper {
+    width: 400px;
+    display: flex;
+    height: 200px;
+    padding: 60px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    @media (max-width: 768px) {
+      height: 350px;
+      padding: 20px;
+      margin: 25px;
+      width: 90%;
+      overflow: hidden;
+    }
+  }
+
+  .home-host__title {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home-host__password, .home-host__login, .home-host__log-in {
+    width: 90%;
+    margin: 5px;
+    max-width: 350px;
+  }
+
+  .home-host__log-in {
+    margin: 5px;
+    margin-bottom: 10px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .home-host__return-link {
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+
+    .home-host__return-link_style {
+      color: darkgrey;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
