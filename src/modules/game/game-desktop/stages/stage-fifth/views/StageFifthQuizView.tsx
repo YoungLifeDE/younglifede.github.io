@@ -80,25 +80,25 @@ export const StageFifthQuizView = ({currentQuestion, lastQuestion, onClickNextSt
                 {currentQuestion?.QUIZ?.variantA &&
                     <div className={`first-button ${getOpacityClassQuiz('A', currentQuestion)}`}>
                         <SquareCustomIcon className="icon"/>
-                        {currentQuestion?.QUIZ?.variantA}
+                        {currentQuestion?.QUIZ?.isImageQuiz ? 'Фото №1' : currentQuestion?.QUIZ?.variantA}
                     </div>}
 
                 {currentQuestion?.QUIZ?.variantB &&
                     <div className={`second-button ${getOpacityClassQuiz('B', currentQuestion)}`}>
                         <DotCustomIcon className="icon"/>
-                        {currentQuestion?.QUIZ?.variantB}
+                        {currentQuestion?.QUIZ?.isImageQuiz ? 'Фото №2' : currentQuestion?.QUIZ?.variantB}
                     </div>}
 
                 {currentQuestion?.QUIZ?.variantC &&
                     <div className={`third-button ${getOpacityClassQuiz('C', currentQuestion)}`}>
                         <HexagonCustomIcon className="icon"/>
-                        {currentQuestion?.QUIZ?.variantC}
+                        {currentQuestion?.QUIZ?.isImageQuiz ? 'Фото №3' : currentQuestion?.QUIZ?.variantC}
                     </div>}
 
                 {currentQuestion?.QUIZ?.variantD &&
                     <div className={`fourth-button ${getOpacityClassQuiz('D', currentQuestion)}`}>
                         <StarCustomIcon className="icon"/>
-                        {currentQuestion?.QUIZ?.variantD}
+                        {currentQuestion?.QUIZ?.isImageQuiz ? 'Фото №4' : currentQuestion?.QUIZ?.variantD}
                     </div>}
             </div>
         </>

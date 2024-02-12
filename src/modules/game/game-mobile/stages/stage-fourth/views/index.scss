@@ -19,3 +19,65 @@
   }
 }
 
+.stage-fourth__quiz-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+
+  .circle-icon, .square-icon, .triangle-icon, .star-icon {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.image-mode {
+  display: flex;
+  flex-wrap: wrap;
+
+  .fourth-stage__icon {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .circle-icon, .square-icon, .triangle-icon, .star-icon {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .quiz-mobile__image-mode {
+    width: 45vw;
+    height: 40svh;
+    border-radius: 10px;
+    margin: 5px;
+    object-fit: cover;
+  }
+
+  .icon__image-quiz {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 40px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    margin-top: 1px;
+
+    .icon {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

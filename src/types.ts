@@ -7,6 +7,7 @@ export type QuizTypes = {
     variantB?: string,
     variantC?: string,
     variantD?: string,
+    isImageQuiz?: boolean,
     correctVariant?: CorrectQuizAnswer
 };
 

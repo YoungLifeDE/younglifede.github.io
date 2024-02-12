@@ -1,5 +1,8 @@
 import React, {useEffect} from 'react';
 import {TextField} from "@mui/material";
+import Checkbox from '@mui/material/Checkbox';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 import {CustomSelect} from "../../../../components/select";
 import {QuizTypes} from "../../../../types.ts";
@@ -19,11 +22,12 @@ const Quiz = (props: Props) => {
             variantB: questionTypeParams?.variantB || '',
             variantC: questionTypeParams?.variantC || '',
             variantD: questionTypeParams?.variantD || '',
+            isImageQuiz: questionTypeParams?.isImageQuiz || false,
             correctVariant: questionTypeParams?.correctVariant || 'A'
         })
     }, []);
 
-    const setValue = (key: string, value: string) => {
+    const setValue = (key: string, value: string | boolean) => {
         setQuestionTypeParams({
             ...questionTypeParams,
             [key]: value
@@ -32,6 +36,14 @@ const Quiz = (props: Props) => {
 
     return (
         <div>
+            <FormGroup>
+                <FormControlLabel control={
+                    <Checkbox
+                        checked={questionTypeParams?.isImageQuiz}
+                        onChange={e => setValue('isImageQuiz', e.target.checked)}
+                    />
+                } label="Is Photo Quiz "/>
+            </FormGroup>
             <TextField
                 size="small"
                 className="question__input"
@@ -64,7 +76,6 @@ const Quiz = (props: Props) => {
                 value={questionTypeParams?.variantD || ''}
                 onChange={e => setValue('variantD', e.target.value)}
             />
-
             <CustomSelect defaultValue={questionTypeParams?.correctVariant} setCorrectAnswer={setValue}/>
         </div>
     );
