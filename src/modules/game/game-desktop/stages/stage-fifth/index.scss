@@ -44,8 +44,9 @@
     }
 
     img {
-      width: 450px;
-      height: 450px;
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: cover;
     }
 
     .stage-fourth__number-of-question {

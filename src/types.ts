@@ -4,11 +4,16 @@ export type CorrectQuizAnswer = 'A' | 'B' | 'C' | 'D';
 
 export type QuizTypes = {
     variantA?: string,
+    linkToImageA?: string,
     variantB?: string,
+    linkToImageB?: string,
     variantC?: string,
+    linkToImageC?: string,
     variantD?: string,
+    linkToImageD?: string,
     isImageQuiz?: boolean,
-    correctVariant?: CorrectQuizAnswer
+    correctVariant?: CorrectQuizAnswer,
+    linkToCorrectImage?: string
 };
 
 export type TrueOrFalseTypes = {

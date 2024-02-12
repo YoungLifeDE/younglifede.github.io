@@ -10,22 +10,22 @@ export const StageFourthQuizView = ({currentQuestion}: Props) => {
         <>
             {currentQuestion?.variantA && <div className="first-button quiz">
                 <SquareCustomIcon className="icon"/>
-                {!currentQuestion?.isImageQuiz ? currentQuestion?.variantA : 'Фото №1'}
+                {currentQuestion?.variantA}
             </div>}
 
             {currentQuestion?.variantB && <div className="second-button">
                 <DotCustomIcon className="icon"/>
-                {!currentQuestion?.isImageQuiz ? currentQuestion?.variantB : 'Фото №2'}
+                {currentQuestion?.variantB}
             </div>}
 
             {currentQuestion?.variantC && <div className="third-button">
                 <HexagonCustomIcon className="icon"/>
-                {!currentQuestion?.isImageQuiz ? currentQuestion?.variantC : 'Фото №3'}
+                {currentQuestion?.variantC}
             </div>}
 
             {currentQuestion?.variantD && <div className="fourth-button">
                 <StarCustomIcon className="icon" />
-                {!currentQuestion?.isImageQuiz ? currentQuestion?.variantD : 'Фото №4'}
+                {currentQuestion?.variantD}
             </div>}
         </>
     );

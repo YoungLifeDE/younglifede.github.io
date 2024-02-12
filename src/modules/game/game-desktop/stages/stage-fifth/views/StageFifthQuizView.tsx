@@ -55,50 +55,54 @@ export const StageFifthQuizView = ({currentQuestion, lastQuestion, onClickNextSt
                     {currentQuestion?.id !== lastQuestion?.id ? 'Далі' : 'Результати'}
                 </Button>
 
-                <div className="stage-fourth__img stage-fifth__charts">
-                    {getChartElements(playersAnswered).map(({answer, variant, className, icon}, index) => (
-                        <Zoom key={index} in={true} timeout={2000}>
-                            <div
-                                className={`${className} ${currentQuestion?.QUIZ?.correctVariant === variant ? '' : 'chart-opacity'}`}>
-                                <div className="number">
-                                    {currentQuestion?.QUIZ?.correctVariant === variant && <CheckIcon className="check-icon"/>}
-                                    {answer}
-                                </div>
+                {
+                    currentQuestion?.QUIZ?.isImageQuiz ? <img src={currentQuestion?.QUIZ?.linkToCorrectImage} alt=""/> :
+                        <div className="stage-fourth__img stage-fifth__charts">
+                            {getChartElements(playersAnswered).map(({answer, variant, className, icon}, index) => (
+                                <Zoom key={index} in={true} timeout={2000}>
+                                    <div
+                                        className={`${className} ${currentQuestion?.QUIZ?.correctVariant === variant ? '' : 'chart-opacity'}`}>
+                                        <div className="number">
+                                            {currentQuestion?.QUIZ?.correctVariant === variant &&
+                                                <CheckIcon className="check-icon"/>}
+                                            {answer}
+                                        </div>
 
-                                <div className="chart" style={{height: `${100 * answer / players.length}%`}}>
-                                </div>
-                                <div className="icon-wrapper">
-                                    {icon}
-                                </div>
-                            </div>
-                        </Zoom>
-                    ))}
-                </div>
+                                        <div className="chart" style={{height: `${100 * answer / players.length}%`}}>
+                                        </div>
+                                        <div className="icon-wrapper">
+                                            {icon}
+                                        </div>
+                                    </div>
+                                </Zoom>
+                            ))}
+                        </div>
+                }
             </div>
 
             <div className="stage-fourth__footer">
                 {currentQuestion?.QUIZ?.variantA &&
                     <div className={`first-button ${getOpacityClassQuiz('A', currentQuestion)}`}>
                         <SquareCustomIcon className="icon"/>
-                        {currentQuestion?.QUIZ?.isImageQuiz ? 'Фото №1' : currentQuestion?.QUIZ?.variantA}
+                        {currentQuestion?.QUIZ?.variantA}
                     </div>}
 
                 {currentQuestion?.QUIZ?.variantB &&
                     <div className={`second-button ${getOpacityClassQuiz('B', currentQuestion)}`}>
                         <DotCustomIcon className="icon"/>
-                        {currentQuestion?.QUIZ?.isImageQuiz ? 'Фото №2' : currentQuestion?.QUIZ?.variantB}
+                        {currentQuestion?.QUIZ?.variantB}
                     </div>}
 
                 {currentQuestion?.QUIZ?.variantC &&
                     <div className={`third-button ${getOpacityClassQuiz('C', currentQuestion)}`}>
                         <HexagonCustomIcon className="icon"/>
-                        {currentQuestion?.QUIZ?.isImageQuiz ? 'Фото №3' : currentQuestion?.QUIZ?.variantC}
+                        {currentQuestion?.QUIZ?.variantC}
                     </div>}
 
                 {currentQuestion?.QUIZ?.variantD &&
                     <div className={`fourth-button ${getOpacityClassQuiz('D', currentQuestion)}`}>
                         <StarCustomIcon className="icon"/>
-                        {currentQuestion?.QUIZ?.isImageQuiz ? 'Фото №4' : currentQuestion?.QUIZ?.variantD}
+                        {currentQuestion?.QUIZ?.variantD}
                     </div>}
             </div>
         </>

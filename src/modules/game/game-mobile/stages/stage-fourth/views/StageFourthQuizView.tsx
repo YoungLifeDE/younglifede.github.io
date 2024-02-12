@@ -63,44 +63,48 @@ export const StageFourthQuizView = ({currentQuestion, setWaitingState}: Props) =
             <div className="fourth-stage__icon" onClick={() => chooseVariant('A')}>
                 {currentQuestion?.QUIZ?.isImageQuiz &&
                     <div className="square-icon">
-                        <img src={currentQuestion?.QUIZ?.variantA} className="quiz-mobile__image-mode" alt=""/>
+                        <img src={currentQuestion?.QUIZ?.linkToImageA} className="quiz-mobile__image-mode" alt=""/>
                     </div>
                 }
                 <div className="icon__image-quiz square-icon">
                     <SquareCustomIcon className="icon"/>
+                    {currentQuestion?.QUIZ?.isImageQuiz && <span>{currentQuestion?.QUIZ?.variantA}</span>}
                 </div>
             </div>
 
             <div className="fourth-stage__icon" onClick={() => chooseVariant('B')}>
                 {currentQuestion?.QUIZ?.isImageQuiz &&
                     <div className="circle-icon">
-                        <img src={currentQuestion?.QUIZ?.variantB} className="quiz-mobile__image-mode" alt=""/>
+                        <img src={currentQuestion?.QUIZ?.linkToImageB} className="quiz-mobile__image-mode" alt=""/>
                     </div>
                 }
                 <div className="icon__image-quiz circle-icon">
                     <DotCustomIcon className="icon"/>
+                    {currentQuestion?.QUIZ?.isImageQuiz && <span>{currentQuestion?.QUIZ?.variantB}</span>}
                 </div>
             </div>
 
             <div className="fourth-stage__icon" onClick={() => chooseVariant('C')}>
                 {currentQuestion?.QUIZ?.isImageQuiz &&
                     <div className="triangle-icon">
-                        <img src={currentQuestion?.QUIZ?.variantC} className="quiz-mobile__image-mode" alt=""/>
+                        <img src={currentQuestion?.QUIZ?.linkToImageC} className="quiz-mobile__image-mode" alt=""/>
                     </div>
                 }
                 <div className="icon__image-quiz triangle-icon">
                     <HexagonCustomIcon className="icon"/>
+                    {currentQuestion?.QUIZ?.isImageQuiz && <span>{currentQuestion?.QUIZ?.variantC}</span>}
                 </div>
             </div>
 
             <div className="fourth-stage__icon" onClick={() => chooseVariant('D')}>
                 {currentQuestion?.QUIZ?.isImageQuiz &&
                     <div className="star-icon">
-                        <img src={currentQuestion?.QUIZ?.variantD} className="quiz-mobile__image-mode" alt=""/>
+                        <img src={currentQuestion?.QUIZ?.linkToImageD} className="quiz-mobile__image-mode" alt=""/>
                     </div>
                 }
                 <div className="icon__image-quiz star-icon">
                     <StarCustomIcon className="icon"/>
+                    {currentQuestion?.QUIZ?.isImageQuiz && <span>{currentQuestion?.QUIZ?.variantD}</span>}
                 </div>
             </div>
         </div>

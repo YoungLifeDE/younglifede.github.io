@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {TextField} from "@mui/material";
+import {Divider, TextField} from "@mui/material";
 import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -19,11 +19,16 @@ const Quiz = (props: Props) => {
     useEffect(() => {
         setQuestionTypeParams({
             variantA: questionTypeParams?.variantA || '',
+            linkToImageA: questionTypeParams?.linkToImageA || '',
             variantB: questionTypeParams?.variantB || '',
+            linkToImageB: questionTypeParams?.linkToImageB || '',
             variantC: questionTypeParams?.variantC || '',
+            linkToImageC: questionTypeParams?.linkToImageC || '',
             variantD: questionTypeParams?.variantD || '',
+            linkToImageD: questionTypeParams?.linkToImageD || '',
             isImageQuiz: questionTypeParams?.isImageQuiz || false,
-            correctVariant: questionTypeParams?.correctVariant || 'A'
+            correctVariant: questionTypeParams?.correctVariant || 'A',
+            linkToCorrectImage: questionTypeParams?.linkToCorrectImage || ''
         })
     }, []);
 
@@ -52,6 +57,21 @@ const Quiz = (props: Props) => {
                 value={questionTypeParams?.variantA || ''}
                 onChange={e => setValue('variantA', e.target.value)}
             />
+            {
+                questionTypeParams?.isImageQuiz &&
+                <>
+                    <TextField
+                        size="small"
+                        className="question__input"
+                        label="Посилання на картинку А*"
+                        variant="outlined"
+                        value={questionTypeParams?.linkToImageA || ''}
+                        onChange={e => setValue('linkToImageA', e.target.value)}
+                    />
+                    <Divider/>
+                </>
+            }
+
             <TextField
                 size="small"
                 className="question__input"
@@ -60,6 +80,21 @@ const Quiz = (props: Props) => {
                 value={questionTypeParams?.variantB || ''}
                 onChange={e => setValue('variantB', e.target.value)}
             />
+            {
+                questionTypeParams?.isImageQuiz &&
+                <>
+                    <TextField
+                        size="small"
+                        className="question__input"
+                        label="Посилання на картинку Б*"
+                        variant="outlined"
+                        value={questionTypeParams?.linkToImageB || ''}
+                        onChange={e => setValue('linkToImageB', e.target.value)}
+                    />
+                    <Divider/>
+                </>
+            }
+
             <TextField
                 size="small"
                 className="question__input"
@@ -68,6 +103,21 @@ const Quiz = (props: Props) => {
                 value={questionTypeParams?.variantC || ''}
                 onChange={e => setValue('variantC', e.target.value)}
             />
+            {
+                questionTypeParams?.isImageQuiz &&
+                <>
+                    <TextField
+                        size="small"
+                        className="question__input"
+                        label="Посилання на картинку В*"
+                        variant="outlined"
+                        value={questionTypeParams?.linkToImageC || ''}
+                        onChange={e => setValue('linkToImageC', e.target.value)}
+                    />
+                    <Divider/>
+                </>
+            }
+
             <TextField
                 size="small"
                 className="question__input"
@@ -76,7 +126,36 @@ const Quiz = (props: Props) => {
                 value={questionTypeParams?.variantD || ''}
                 onChange={e => setValue('variantD', e.target.value)}
             />
+            {
+                questionTypeParams?.isImageQuiz &&
+                <>
+                    <TextField
+                        size="small"
+                        className="question__input"
+                        label="Посилання на картинку Г*"
+                        variant="outlined"
+                        value={questionTypeParams?.linkToImageD || ''}
+                        onChange={e => setValue('linkToImageD', e.target.value)}
+                    />
+                    <Divider/>
+                </>
+            }
+
             <CustomSelect defaultValue={questionTypeParams?.correctVariant} setCorrectAnswer={setValue}/>
+            {
+                questionTypeParams?.isImageQuiz &&
+                <>
+                    <TextField
+                        size="small"
+                        className="question__input"
+                        label="Посилання на вірну відповідь*"
+                        variant="outlined"
+                        value={questionTypeParams?.linkToCorrectImage || ''}
+                        onChange={e => setValue('linkToCorrectImage', e.target.value)}
+                    />
+                    <Divider/>
+                </>
+            }
         </div>
     );
 };
